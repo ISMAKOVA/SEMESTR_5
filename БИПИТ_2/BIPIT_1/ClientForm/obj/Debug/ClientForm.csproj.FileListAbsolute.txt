@@ -1,0 +1,10 @@
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\bin\Debug\ClientForm.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\bin\Debug\ClientForm.exe
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\bin\Debug\ClientForm.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\obj\Debug\ClientForm.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\obj\Debug\ClientForm.Form1.resources
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\obj\Debug\ClientForm.Properties.Resources.resources
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\obj\Debug\ClientForm.csproj.GenerateResource.cache
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\obj\Debug\ClientForm.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\obj\Debug\ClientForm.exe
+C:\Users\Даяна Исмакова\Desktop\универ\БИПИТ_2\BIPIT_1\ClientForm\obj\Debug\ClientForm.pdb
