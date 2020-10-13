@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>лаба 1 - POS</title>
+</head>
+<body>
+    <div class=form_frame">
+        <form action="script.js" method="POST">
+            <input type="file" id="file-selector">
+            <div id="btn">
+                <input type="button" id = "upload-btn" value="Загрузить текст" onclick="UploadBtn();">
+            </div>
+            <div>
+                <select>
+                    <option>Сортировать по алфавиту</option>
+                    <option>Сортировать по длине слова</option>
+                </select>
+                <input type="button" id ="show-btn" value="Вывести токены" onclick="Show();">
+            </div>
+
+
+        </form>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
