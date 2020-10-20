@@ -13,5 +13,14 @@ namespace BIPIT_4
         {
 
         }
+        protected void Btn_1(object sender, System.EventArgs e)
+        {
+            Server.Transfer("Table.aspx", true);
+        }
+        protected void Btn_2(object sender, System.EventArgs e)
+        {
+            Server.Transfer("AddPage.aspx", true);
+        }
+
     }
 }
