@@ -31,13 +31,23 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Выбрать">
                         <ItemTemplate>
-                            <asp:CheckBox ID="CheckBox1" runat="server" />
+                            <asp:CheckBox ID="ch" runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
         </div>
+        
     </div>
 
+        <div class="row">
+            <div class="col-sm">      
+                </div>
+             <div class="col-sm">      
+                </div>
+            <div class="col-sm">   
+        <asp:Button ID="btn_delete" CssClass ="btn btn-danger m-3" onclick="Delete" runat="server" Text="Удалить" />
+                </div>
+        </div>
         </div>
 </asp:Content>
