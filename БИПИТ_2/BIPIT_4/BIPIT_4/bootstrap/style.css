@@ -26,4 +26,13 @@
         .navbar-container .navbar-nav {
             flex-direction: column !important;
         }
+        .my_calendar{
+            height:200px;
+        }
+        .overflow {
+        height: 70%;
+        overflow: scroll;
+        margin-right: 18px;
+        }
+
 }
