@@ -66,7 +66,7 @@ namespace BIPIT_3
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar from;
+        protected global::System.Web.UI.WebControls.TextBox from;
 
         /// <summary>
         /// to элемент управления.
@@ -75,7 +75,7 @@ namespace BIPIT_3
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar to;
+        protected global::System.Web.UI.WebControls.TextBox to;
 
         /// <summary>
         /// error элемент управления.

@@ -23,8 +23,8 @@ namespace BIPIT_3
         protected void Add(object sender, EventArgs e)
         {
 
-            var c_from = from.SelectedDate.ToShortDateString();
-            var c_to = to.SelectedDate.ToShortDateString();
+            var c_from = from.Text;
+            var c_to = to.Text;
             if (c_from != "01.01.0001" || c_to != "01.01.0001")
             {
                 if (Convert.ToDateTime(c_from) > Convert.ToDateTime(c_to))
@@ -32,7 +32,7 @@ namespace BIPIT_3
                     error.Text = "Вторая дата не должна быть меньше первой";
                     return;
                 }
-                var service = new ServiceReference1.ServiceSoapClient();
+                Service service = new Service();
                 var exhibit_id = exhibit_list.Text.Split(new char[] { '-' })[0];
                 var hall_id = halls_list.Text.Split(new char[] { '-' })[0];
 
@@ -45,7 +45,7 @@ namespace BIPIT_3
         protected void FillDropList(string table, DropDownList list)
         {
             list.Items.Clear();
-            var service = new ServiceReference1.ServiceSoapClient();
+            Service service = new Service();
             DataTable data = service.Show(table).Tables[table];
             for (int i = 0; i < data.Rows.Count; i++)
             {

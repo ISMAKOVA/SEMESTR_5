@@ -23,14 +23,7 @@
             <!-- Пункты вертикального меню -->
             <ul class="navbar-nav">
               <li class="nav-item">
-              <asp:Button runat="server" BorderStyle="None"  onclick="ShowTable_1" CssClass="nav-link bg-light" text="Экспонаты"/>
-              </li>
-              <li class="nav-item">
-              <asp:Button runat="server" BorderStyle="None"  onclick="ShowTable_2" CssClass="nav-link bg-light" text="Залы"/>
-              </li>
-              <li class="nav-item">
-              <asp:Button runat="server" BorderStyle="None"  onclick="ShowTable_3" CssClass="nav-link bg-light" text="Перемещения"/>
-              </li>
+
                <li class="nav-item">
               <asp:Button runat="server" BorderStyle="None"  PostBackUrl="~/Table.aspx"  CssClass="nav-link bg-light" text="Список"/>
               </li>

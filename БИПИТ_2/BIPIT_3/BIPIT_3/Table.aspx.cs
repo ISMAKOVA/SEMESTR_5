@@ -19,9 +19,9 @@ namespace BIPIT_3
 
         protected void ShowTable(object sender, EventArgs e)
         {
-            var service = new ServiceReference1.ServiceSoapClient();
-            var c_from = from.SelectedDate.ToShortDateString();
-            var c_to = to.SelectedDate.ToShortDateString();
+            Service service = new Service();
+            var c_from = from.Text;
+            var c_to = to.Text;
             if (c_from != "01.01.0001" || c_to != "01.01.0001")
             {
 
@@ -40,7 +40,7 @@ namespace BIPIT_3
 
         protected void Delete(object sender, EventArgs e)
         {
-            var service = new ServiceReference1.ServiceSoapClient();
+            Service service = new Service();
             for (int i = 0; i < Table1.Rows.Count; i++)
             {
                 var checkbox = (CheckBox)Table1.Rows[i].FindControl("ch");

@@ -8,11 +8,11 @@
         <div class="row">
             <div class="col-sm">
         <h4>c</h4>
-        <asp:Calendar ID="from" runat="server" CssClass="p-2"></asp:Calendar>
+        <asp:TextBox ID="from" runat="server" TextMode="Date" CssClass="p-2"></asp:TextBox>
                 </div>
             <div class="col-sm">
         <h4>по</h4>
-        <asp:Calendar ID="to" runat="server" CssClass="p-2"></asp:Calendar>
+        <asp:TextBox ID="to" runat="server" TextMode="Date" CssClass="p-2"></asp:TextBox>
              </div>
             <div class="col-sm">
                 <asp:Button ID="Button" CssClass ="btn btn-secondary" onclick="ShowTable" runat="server" Text="Показать"/>

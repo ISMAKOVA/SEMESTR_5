@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="AddPage.aspx.cs" Inherits="BIPIT_3.WebForm3" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="AddPage.aspx.cs" Inherits="BIPIT_3.AddPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="content" runat="server">
     <div class="container">
     <h1 class="m-2">Добавить перемещение</h1>
@@ -31,13 +31,14 @@
             <div class="row">
                          <div class="col-sm">
         <h4>c</h4>
-        <asp:Calendar ID="from" runat="server" CssClass="p-2"></asp:Calendar>
+
+        <asp:TextBox ID="from" runat="server" TextMode="Date" CssClass="p-2"></asp:TextBox>
                 </div>
             <div class="col-sm">
         <h4>по</h4>
-        <asp:Calendar ID="to" runat="server" CssClass="p-2"></asp:Calendar>
+             <asp:TextBox ID="to" runat="server" TextMode="Date" CssClass="p-2"></asp:TextBox>
              </div>
-                </div>
+               </div>
             
         </div>
         </div>
