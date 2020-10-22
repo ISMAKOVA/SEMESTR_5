@@ -117,6 +117,7 @@
     <None Include="Connected Services\ServiceReference1\Service.wsdl" />
     <None Include="packages.config" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
