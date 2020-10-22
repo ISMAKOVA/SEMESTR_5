@@ -49,10 +49,11 @@ namespace BIPIT_4
                 {
                     var id = Convert.ToInt32(Table1.Rows[i].Cells[1].Text);
                     service.DeleteRec(id);
-                    ShowTable(sender, e);
+                    
                 }
             }
-            
+            ShowTable(sender, e);
+
         }
 
     }

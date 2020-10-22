@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Table.aspx.cs" Inherits="BIPIT_4.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="content" runat="server">
     <div class="container">
-    <h1>Таблица перемещений</h1>
+    <h1 class="m-2">Таблица перемещений</h1>
     <asp:Label id="header" Text="" runat="server"/>
     <div class="m-2 p-2 form-group">
         <h3>Получить записи за период</h3>
@@ -19,8 +19,9 @@
             </div>
             </div>
     </div>
-    <div class="row overflow">
-        <asp:Label ID="tableHead" runat="server" CssClass="h-auto"></asp:Label>
+       
+    <div class="row max-h">
+        <asp:Label ID="tableHead" runat="server" CssClass="h-auto overflow"></asp:Label>
         <div class="col m-4">        
             <asp:GridView ID="Table1" 
                            HorizontalAlign="Center" 

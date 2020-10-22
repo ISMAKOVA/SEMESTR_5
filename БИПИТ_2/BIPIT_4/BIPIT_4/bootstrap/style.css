@@ -34,5 +34,8 @@
         overflow: scroll;
         margin-right: 18px;
         }
+        .max-h{
+            height:400px;
+        }
 
 }
