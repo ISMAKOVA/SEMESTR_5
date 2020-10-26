@@ -49,6 +49,7 @@
             file = e.target.files[0].name;
         });
         $('#btn').click(function(){
+            $('#show').css('display','none');
             let filter = $( "#vsm option:selected" ).val();
 
             $.ajax({
