@@ -1,0 +1,113 @@
+from flask import Flask, request, jsonify, render_template
+import pymorphy2
+import re
+from collections import Counter
+import math
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+@app.route('/data', methods=['GET', 'POST'])
+def data():
+    file = request.form.get('file')
+    my_filter = request.form.get('filter')
+    path = '/Applications/MAMP/htdocs/5 семестр/ВЕБ_3/лаба_3/' + file
+    docs = read_file(path)
+    my_dict, my_docs = create_dict(docs)
+    boolean, idf_list = get_boolean(my_dict, my_docs)
+    tf_list = term_frequency(my_dict, my_docs)
+    tf_idf_list = tf_idf(tf_list, idf_list,my_dict)
+    #print(tf_idf_list)
+    return jsonify(my_dict)
+
+
+def read_file(obj_file):
+    string = ''
+    result = []
+    f = open(obj_file)
+    for line in f.readlines():
+        string += line
+    all_docs = re.split(r'Документ\s+№\s*\d+[*]+', string)
+    i = 1
+    for doc in all_docs:
+        result.append({
+            'id': i,
+            'doc': doc
+        })
+        i += 1
+    return result
+
+
+def create_dict(docs):
+    my_dict = []
+    my_docs = {}
+    for doc in docs:
+        morph = pymorphy2.MorphAnalyzer()
+        t = re.split(r'\W+', doc['doc'].lower())
+        r = re.compile("[а-яА-Яa-zA-Z]+")
+        token_list = [w for w in filter(r.match, t)]
+        clear_token_list = []
+        for token in token_list:
+            clear_token_list.append(morph.parse(token)[0].normal_form)
+        my_docs[doc['id']] = clear_token_list
+        for token in clear_token_list:
+            if token not in my_dict:
+                my_dict.append(token)
+    return my_dict, my_docs
+
+
+def get_boolean(input_dict, my_docs):
+    boolean_list = {}
+    idf_list = {}
+    for token in input_dict:
+        idf_list[token] =0
+    for list_id, doc in my_docs.items():
+        tmp_list = []
+        for token in input_dict:
+            if token in doc:
+                tmp_list.append(1)
+                idf_list[token] += 1
+            else:
+                tmp_list.append(0)
+        boolean_list[list_id] = tmp_list
+    return boolean_list, idf_list
+
+
+def term_frequency(input_dict, my_docs):
+    tf_list = {}
+    count_dict = {}
+    for list_id, doc in my_docs.items():
+        count_dict[list_id] = dict(Counter(doc))
+
+    for list_id, doc in count_dict.items():
+        tmp_list = []
+        for token in input_dict:
+            if token in doc.keys():
+                tmp_list.append(doc[token])
+            else:
+                tmp_list.append(0)
+        tf_list[list_id] = tmp_list
+    return tf_list
+
+
+def tf_idf(tf_list, idf_list, my_dict):
+    tf_idf_list = {}
+    tf = {}
+    for list_id, doc in tf_list.items():#tf = n/Nd
+        tmp_list = []
+        for i in doc:
+            tmp_list.append(i/len(doc))
+        tf[list_id] = tmp_list
+    idf = {}
+    for token, i in idf_list.items():
+        idf[token] = math.log2(len(tf_list)/i)
+
+    for token in my_dict:
+        #tf_idf_list[token] = idf[token]*tf[token]
+
+    return tf_idf_list
