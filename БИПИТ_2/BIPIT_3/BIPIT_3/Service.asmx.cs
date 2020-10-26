@@ -86,5 +86,24 @@ namespace BIPIT_3
 
         }
 
+        public DataSet GetMovingData()
+        {
+            DataSet dataSet = new DataSet();
+            SqlConnection con = new SqlConnection(path);
+
+            SqlCommand command;
+
+            string query = "select Moving.id as 'ID', Exhibits.exhibit as 'Экспонат', Exhibits.name as 'Название', Exhibits.author as 'Автор', Halls.museum as 'Музей', Year(GETDATE())-Exhibits.year as 'Возраст работы', format(Moving.date_start,'dd.MM.yyyy г.') as 'Дата поступления работы' from Exhibits, Halls, Moving where Moving.exhibit_fk = Exhibits.id_exhibit and Moving.halls_fk = Halls.id_hall";
+            command = new SqlCommand(query, con);
+
+            con.Open();
+
+            SqlDataAdapter sqlData1 = new SqlDataAdapter(command);
+            sqlData1.Fill(dataSet, "Moving");
+            con.Close();
+            return dataSet;
+        }
+
+
     }
 }

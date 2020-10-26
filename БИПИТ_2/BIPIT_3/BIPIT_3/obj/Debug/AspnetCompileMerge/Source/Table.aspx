@@ -16,13 +16,14 @@
              </div>
             <div class="col-sm">
                 <asp:Button ID="Button" CssClass ="btn btn-secondary" onclick="ShowTable" runat="server" Text="Показать"/>
+                <asp:Button ID="btn_delete" CssClass ="btn btn-danger m-3" onclick="Delete" runat="server" Text="Удалить" />
             </div>
             </div>
     </div>
-       
-    <div class="row max-h">
-        <asp:Label ID="tableHead" runat="server" CssClass="h-auto overflow"></asp:Label>
-        <div class="col m-4">        
+               <p>        <asp:Label ID="tableHead" runat="server" CssClass="h-auto "></asp:Label></p>
+    <div class="row ">
+
+        <div class="col m-4 overflow-auto">        
             <asp:GridView ID="Table1" 
                            HorizontalAlign="Center" 
                             Font-Names="Verdana" 
@@ -41,14 +42,5 @@
         
     </div>
 
-        <div class="row">
-            <div class="col-sm">      
-                </div>
-             <div class="col-sm">      
-                </div>
-            <div class="col-sm">   
-        <asp:Button ID="btn_delete" CssClass ="btn btn-danger m-3" onclick="Delete" runat="server" Text="Удалить" />
-                </div>
-        </div>
         </div>
 </asp:Content>

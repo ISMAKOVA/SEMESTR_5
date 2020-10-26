@@ -42,9 +42,9 @@
             
         </div>
         </div>
-
+        <p><asp:Label id="error" Text="" runat="server"/></p>
         <div class="row justify-content-md-end m-2">
-            <asp:Label id="error" Text="" runat="server"/>
+            
             <div class="col">
             <asp:Button ID="add" CssClass="btn btn-primary mt-4" runat="server" Text="Добавить" OnClick="Add" />
                 </div>

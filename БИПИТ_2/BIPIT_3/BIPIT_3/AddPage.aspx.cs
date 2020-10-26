@@ -25,7 +25,7 @@ namespace BIPIT_3
 
             var c_from = from.Text;
             var c_to = to.Text;
-            if (c_from != "01.01.0001" || c_to != "01.01.0001")
+            if (c_from != "" || c_to != "")
             {
                 if (Convert.ToDateTime(c_from) > Convert.ToDateTime(c_to))
                 {
@@ -39,6 +39,11 @@ namespace BIPIT_3
                 service.NewRec(exhibit_id, hall_id, c_from, c_to);
                 Server.Transfer("Table.aspx", true);
             }
+            else
+            {
+                error.Text = "Выберите даты";
+                return;
+            }
 
 
         }
@@ -47,6 +52,7 @@ namespace BIPIT_3
             list.Items.Clear();
             Service service = new Service();
             DataTable data = service.Show(table).Tables[table];
+
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 list.Items.Add(string.Join("-", data.Rows[i].ItemArray));

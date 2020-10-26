@@ -51,6 +51,15 @@ namespace BIPIT_3
         protected global::System.Web.UI.WebControls.Button Button;
 
         /// <summary>
+        /// btn_delete элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_delete;
+
+        /// <summary>
         /// tableHead элемент управления.
         /// </summary>
         /// <remarks>
@@ -67,14 +76,5 @@ namespace BIPIT_3
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView Table1;
-
-        /// <summary>
-        /// btn_delete элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_delete;
     }
 }

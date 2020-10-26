@@ -11,13 +11,13 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="AddPage.aspx">
-      <publishTime>10/23/2020 00:23:54</publishTime>
+      <publishTime>10/26/2020 16:38:03</publishTime>
     </File>
     <File Include="bin/BIPIT_3.dll">
-      <publishTime>10/23/2020 00:26:50</publishTime>
+      <publishTime>10/26/2020 17:55:26</publishTime>
     </File>
     <File Include="bin/BIPIT_3.pdb">
-      <publishTime>10/23/2020 00:26:50</publishTime>
+      <publishTime>10/26/2020 17:55:26</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -176,7 +176,7 @@
       <publishTime>10/04/2020 15:31:22</publishTime>
     </File>
     <File Include="bootstrap/style.css">
-      <publishTime>10/22/2020 20:39:44</publishTime>
+      <publishTime>10/26/2020 16:30:10</publishTime>
     </File>
     <File Include="Default.Master">
       <publishTime>10/22/2020 23:14:11</publishTime>
@@ -185,7 +185,7 @@
       <publishTime>10/22/2020 20:41:09</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>10/23/2020 00:26:57</publishTime>
+      <publishTime>10/26/2020 17:55:33</publishTime>
     </File>
     <File Include="Properties/DataSources/System.Data.DataSet.datasource">
       <publishTime>10/22/2020 20:52:11</publishTime>
@@ -194,10 +194,10 @@
       <publishTime>10/04/2020 16:07:48</publishTime>
     </File>
     <File Include="Table.aspx">
-      <publishTime>10/23/2020 00:25:15</publishTime>
+      <publishTime>10/26/2020 17:38:54</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/22/2020 23:16:01</publishTime>
+      <publishTime>10/26/2020 16:30:18</publishTime>
     </File>
     <File Include="WebForm1.aspx">
       <publishTime>10/11/2020 20:41:21</publishTime>

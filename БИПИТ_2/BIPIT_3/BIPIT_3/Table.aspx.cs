@@ -11,10 +11,15 @@ namespace BIPIT_3
 {
     public partial class Table : System.Web.UI.Page
     {
+
+        
         DataSet dataSet;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ShowTable(sender, e);
+            }
         }
 
         protected void ShowTable(object sender, EventArgs e)
@@ -22,20 +27,20 @@ namespace BIPIT_3
             Service service = new Service();
             var c_from = from.Text;
             var c_to = to.Text;
-            if (c_from != "01.01.0001" || c_to != "01.01.0001")
+            if (c_from != "" || c_to != "")
             {
 
                 dataSet = service.GetData(c_from, c_to);
-                var table = dataSet.Tables["Moving"];
-                Table1.DataSource = table;
-                Table1.DataBind();
-                tableHead.Text = "";
+
             }
             else
             {
-                tableHead.Text = "Вы ничего не выбрали";
+                dataSet = service.GetMovingData();
             }
-
+            var table = dataSet.Tables["Moving"];
+            Table1.DataSource = table;
+            Table1.DataBind();
+            tableHead.Text = "";
         }
 
         protected void Delete(object sender, EventArgs e)
@@ -52,6 +57,7 @@ namespace BIPIT_3
                 }
             }
             ShowTable(sender, e);
+
 
         }
 
