@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIPIT_5_CLIENT", "BIPIT_5_CLIENT\BIPIT_5_CLIENT.csproj", "{A00D5E23-F955-4C97-92EB-243FDAB59709}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIPIT_5_HOST", "BIPIT_5_HOST\BIPIT_5_HOST.csproj", "{BFD64DFD-B61B-4F75-BA77-E29A17BB50C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A00D5E23-F955-4C97-92EB-243FDAB59709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00D5E23-F955-4C97-92EB-243FDAB59709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00D5E23-F955-4C97-92EB-243FDAB59709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00D5E23-F955-4C97-92EB-243FDAB59709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD64DFD-B61B-4F75-BA77-E29A17BB50C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD64DFD-B61B-4F75-BA77-E29A17BB50C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD64DFD-B61B-4F75-BA77-E29A17BB50C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD64DFD-B61B-4F75-BA77-E29A17BB50C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BDB87D6-D308-482F-B6F4-DEBA78C1480F}
+	EndGlobalSection
+EndGlobal
