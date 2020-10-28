@@ -22,8 +22,15 @@ namespace BIPIT_5_HOST
             command.Parameters.AddWithValue("@halls_fk", halls_fk);
             command.Parameters.AddWithValue("@date_start", Convert.ToDateTime(date_start));
             command.Parameters.AddWithValue("@date_end", Convert.ToDateTime(date_end));
-            command.ExecuteNonQuery();
-            Program.Print(String.Format("[{0}] - Выполнено: запись добавлена",DateTime.Now.ToShortDateString()));
+            try
+            {
+                command.ExecuteNonQuery();
+                Program.Print(String.Format("[{0}] - Выполнено: запись добавлена", DateTime.Now.ToShortDateString()));
+            }
+            catch
+            {
+                Program.Print(String.Format("[{0}] - Ошибка: запись не добавлена", DateTime.Now.ToShortDateString()));
+            }
             con.Close();
         }
 
@@ -48,12 +55,18 @@ namespace BIPIT_5_HOST
             DataSet dataSet = new DataSet();
             SqlConnection con = new SqlConnection(path);
             SqlCommand command = new SqlCommand(query, con);
-
-            con.Open();
-            SqlDataAdapter sqlData1 = new SqlDataAdapter(command);
-            sqlData1.Fill(dataSet, tableName);
-            con.Close();
-            Program.Print(String.Format("[{0}] - Выполнено: данные получены | {1}", DateTime.Now.ToShortDateString(),tableName));
+            try
+            {
+                con.Open();
+                SqlDataAdapter sqlData1 = new SqlDataAdapter(command);
+                sqlData1.Fill(dataSet, tableName);
+                con.Close();
+                Program.Print(String.Format("[{0}] - Выполнено: данные получены | {1}", DateTime.Now.ToShortDateString(), tableName));
+            }
+            catch
+            {
+                Program.Print(String.Format("[{0}] - Ошибка: данные не получены | {1}", DateTime.Now.ToShortDateString(), tableName));
+            }
             return dataSet;
         }
     }
