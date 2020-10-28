@@ -17,7 +17,7 @@ def index():
 def data():
     file = request.form.get('file')
     my_filter = request.form.get('filter')
-    path = '/Applications/MAMP/htdocs/5 семестр/ВЕБ_3/лаба_3/' + file
+    path = '/Applications/MAMP/htdocs/SEMESTR_5/ВЕБ/ВЕБ_3/лаба_3/' + file
     docs = read_file(path)
     my_docs, my_dict = clear_text(docs)
     boolean, tf, tf_idf = vsm(my_docs, my_dict)
@@ -112,3 +112,14 @@ def write_csv(info):
         for i, doc in info.items():
             str_r = [i]+doc
             a_pen.writerow(str_r)
+
+#для проверки в консоли
+def check():
+    path = '/Applications/MAMP/htdocs/SEMESTR_5/ВЕБ/ВЕБ_3/лаба_3/dataset.txt'
+    docs = read_file(path)
+    my_docs, my_dict = clear_text(docs)
+    boolean, tf, tf_idf = vsm(my_docs, my_dict)
+
+    write_csv(tf_idf)
+
+check()
