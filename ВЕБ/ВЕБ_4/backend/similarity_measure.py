@@ -1,16 +1,7 @@
-import vsm
 import math
 import operator
+import vsm
 
-query = [
-    "знаменитый ученый Стивен Хокинг рассказал в интервью ТАСС о будущем человечества на Марсе. По мнению физика-теоретика, колонизация Марса состоится в ближайшие 100 лет.Внимание NASA и других мировых космических агентств сосредоточено на Марсе. Это ближайшая похожая на Землю планета, с почвой и атмосферой. И хотя колонизировать Луну было бы проще — она находится всего лишь в трех днях [полета от Земли], освоение Марса представляется более интересной задачей и потребовало бы создания действительно автономной колонии», — уверен ученый."]
-my_docs_q, my_dict_q = vsm.clear_text(query)
-tf_idf_q = vsm.compute_tf_idf1(my_docs_q, my_dict_q)
-
-path = '/Applications/MAMP/htdocs/SEMESTR_5/ВЕБ/ВЕБ_3/лаба_3/dataset.txt'
-docs = vsm.read_file(path)
-my_docs_d, my_dict_d = vsm.clear_text(docs)
-tf_idf_d = vsm.compute_tf_idf1(my_docs_d, my_dict_d)
 
 
 def cosine(tf_idf_1, tf_idf_2):
@@ -31,9 +22,6 @@ def cosine(tf_idf_1, tf_idf_2):
             res.append(cos(vec1, cur))
         break
     return res
-
-
-print(cosine(tf_idf_q, tf_idf_d))
 
 
 def jaccard(tf_idf_1, tf_idf_2):
@@ -57,9 +45,6 @@ def jaccard(tf_idf_1, tf_idf_2):
     return res
 
 
-print(jaccard(tf_idf_q, tf_idf_d))
-
-
 def dice(tf_idf_1, tf_idf_2):
     def sim_dice(v1, v2):
         res_sum = sum(map(operator.add, v1, v2))
@@ -78,5 +63,24 @@ def dice(tf_idf_1, tf_idf_2):
         break
     return res
 
-
-print(dice(tf_idf_q, tf_idf_d))
+# query = ["Знаменитый ученый Стивен Хокинг рассказал в интервью ТАСС о будущем человечества на Марсе. По мнению физика-теоретика, колонизация Марса состоится в ближайшие 100 лет."]
+# path = '/Applications/MAMP/htdocs/SEMESTR_5/ВЕБ/ВЕБ_3/лаба_3/dataset.txt'
+# docs = vsm.read_file(path)
+#
+# my_docs_q, my_dict_q = vsm.clear_text(query)
+# my_docs_d, my_dict_d = vsm.clear_text(docs)
+#
+# tf_idf_q = vsm.compute_tf_idf1(my_docs_q, my_dict_q)
+# tf_idf_d = vsm.compute_tf_idf1(my_docs_d, my_dict_d)
+#
+# res1,re2,res3 = vsm.vsm(my_docs_d,my_dict_d)
+#
+# print(re2)
+# print("-------------")
+# print(tf_idf_d)
+# cosine = cosine(tf_idf_q, tf_idf_d)
+# jaccard = jaccard(tf_idf_q, tf_idf_d)
+# dice = dice(tf_idf_q, tf_idf_d)
+# print(cosine)
+# print(jaccard)
+# print(dice)

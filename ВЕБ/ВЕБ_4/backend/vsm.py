@@ -102,7 +102,6 @@ def compute_tf_idf1(my_docs, my_dict):
         c = []
         for j in range(len(my_docs)):
             if my_dict[i] in my_docs[j]:
-
                 c.append(tf2[j][i] * math.log2(len(my_docs[j]) / sum([1.0 for z in my_docs if my_dict[i] in z])))
             else:
                 c.append(0)
