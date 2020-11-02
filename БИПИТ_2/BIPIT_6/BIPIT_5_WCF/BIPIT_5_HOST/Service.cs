@@ -49,6 +49,10 @@ namespace BIPIT_5_HOST
         {
             return SqlSelectData("Halls", "select * from Halls");
         }
+        public void HostInfo(int x)
+        {
+            Program.DisplayHostInfo(x);
+        }
 
         private DataSet SqlSelectData(string tableName, string query)
         {
@@ -69,5 +73,6 @@ namespace BIPIT_5_HOST
             }
             return dataSet;
         }
+
     }
 }

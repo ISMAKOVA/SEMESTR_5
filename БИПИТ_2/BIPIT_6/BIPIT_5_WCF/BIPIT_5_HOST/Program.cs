@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 using System.ServiceModel.Description;
-using BIPIT_5_HOST;
 
 namespace BIPIT_5_HOST
 {
     class Program
     {
+        static ServiceHost serviceH;
         static void Main(string[] args)
         {
             Console.WriteLine("--------------------WCF хост----------------------");
-            using (ServiceHost serviceH = new ServiceHost(typeof(Service)))
+            using (serviceH = new ServiceHost(typeof(Service)))
             {
                 serviceH.Open();
                 Console.WriteLine("Сервис запущен");
@@ -27,6 +27,20 @@ namespace BIPIT_5_HOST
         public static void Print(string text)
         {
             Console.WriteLine(text);
+        }
+
+        public static void DisplayHostInfo(int x)
+        {
+            Console.WriteLine();
+            Console.WriteLine("--------------------Host info----------------------");
+            Console.WriteLine("Name {0}", serviceH.Description.ConfigurationName);
+
+            Console.WriteLine("Port {0}", serviceH.BaseAddresses[x].Port);
+            Console.WriteLine("Uri {0}", serviceH.BaseAddresses[x].AbsoluteUri);
+            Console.WriteLine("Scheme {0}", serviceH.BaseAddresses[x].Scheme);
+            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine();
+
         }
     }
 }

@@ -24,5 +24,8 @@ namespace BIPIT_5_HOST
 
         [OperationContract]
         DataSet GetDataHalls();
+        
+        [OperationContract]
+        void HostInfo(int x);
     }
 }

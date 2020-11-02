@@ -38,6 +38,12 @@ namespace BIPIT_6_WEB_CLIENT.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetDataHalls", ReplyAction="http://tempuri.org/IService/GetDataHallsResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetDataHallsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/HostInfo", ReplyAction="http://tempuri.org/IService/HostInfoResponse")]
+        void HostInfo(int x);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/HostInfo", ReplyAction="http://tempuri.org/IService/HostInfoResponse")]
+        System.Threading.Tasks.Task HostInfoAsync(int x);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +103,14 @@ namespace BIPIT_6_WEB_CLIENT.ServiceReference1 {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetDataHallsAsync() {
             return base.Channel.GetDataHallsAsync();
+        }
+        
+        public void HostInfo(int x) {
+            base.Channel.HostInfo(x);
+        }
+        
+        public System.Threading.Tasks.Task HostInfoAsync(int x) {
+            return base.Channel.HostInfoAsync(x);
         }
     }
 }

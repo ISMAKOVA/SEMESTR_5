@@ -111,7 +111,7 @@
     <None Include="Connected Services\ServiceReference1\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\item2.xsd">
+    <None Include="Connected Services\ServiceReference1\item5.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\Service.wsdl" />

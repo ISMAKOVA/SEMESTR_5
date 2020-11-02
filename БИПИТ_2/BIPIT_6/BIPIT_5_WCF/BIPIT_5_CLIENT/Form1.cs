@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ServiceModel;
+using BIPIT_5_HOST;
 
 namespace BIPIT_5_CLIENT
 {
@@ -21,6 +22,7 @@ namespace BIPIT_5_CLIENT
         private void Form1_Load(object sender, EventArgs e)
         {
             var service = new ServiceReference1.ServiceClient();
+            service.HostInfo(1);
             var exhibits = service.GetDataExhibits().Tables["Exhibits"];
             var halls = service.GetDataHalls().Tables["Halls"];
             dataGridView1.DataSource = service.GetData().Tables["Moving"];

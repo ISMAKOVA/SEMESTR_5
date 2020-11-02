@@ -103,6 +103,12 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BIPIT_5_HOST\BIPIT_5_HOST.csproj">
+      <Project>{bfd64dfd-b61b-4f75-ba77-e29a17bb50c3}</Project>
+      <Name>BIPIT_5_HOST</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
   <ItemGroup>

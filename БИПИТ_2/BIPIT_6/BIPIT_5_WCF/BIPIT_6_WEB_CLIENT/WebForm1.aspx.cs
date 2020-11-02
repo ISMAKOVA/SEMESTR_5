@@ -13,6 +13,7 @@ namespace BIPIT_6_WEB_CLIENT
         protected void Page_Load(object sender, EventArgs e)
         {
             var service = new ServiceReference1.ServiceClient();
+            service.HostInfo(0);
             var exhibits = service.GetDataExhibits().Tables["Exhibits"];
             var halls = service.GetDataHalls().Tables["Halls"];
             Table1.DataSource = service.GetData().Tables["Moving"];
