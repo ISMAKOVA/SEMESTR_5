@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="811889a4-5885-4d86-9de7-bdb83dbb6e77" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d7ac0a57-7e96-4026-9338-58405e32c25e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="net.tcp://localhost:8734/Design_Time_Addresses/BIPIT_5_HOST/Service/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="928eb06e-42f7-4d79-9218-e0604e30f698" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?wsdl" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="6d7198b5-c068-4854-83a6-5e4668b4df27" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd1" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="afedc09a-cab8-425e-8e19-1db7823c34f9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd0" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="52b450fd-cfa3-4fcf-be27-31d7094c641d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?disco" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="1a96afcc-b9d3-4d7c-b369-c3f24cfe38fb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd2" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="baff9ada-1554-4453-a5d8-29e884b4f999" SourceId="1" SourceUrl="net.tcp://localhost:8734/Design_Time_Addresses/BIPIT_5_HOST/Service/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="42bbe86c-9a9a-4d59-85ba-a274d42acec7" SourceId="1" SourceUrl="net.tcp://localhost:8734/Design_Time_Addresses/BIPIT_5_HOST/Service/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7b40a857-11a0-4a75-aee3-af5049f444a3" SourceId="1" SourceUrl="net.tcp://localhost:8734/Design_Time_Addresses/BIPIT_5_HOST/Service/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="68e58f4f-1b40-4365-84b9-dede5fa9b1dc" SourceId="1" SourceUrl="net.tcp://localhost:8734/Design_Time_Addresses/BIPIT_5_HOST/Service/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

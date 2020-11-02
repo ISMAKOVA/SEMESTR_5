@@ -5,3 +5,10 @@ C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2
 C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_5\BIPIT_5_CLIENT\BIPIT_5_HOST\obj\Debug\BIPIT_5_HOST.csproj.CoreCompileInputs.cache
 C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_5\BIPIT_5_CLIENT\BIPIT_5_HOST\obj\Debug\BIPIT_5_HOST.exe
 C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_5\BIPIT_5_CLIENT\BIPIT_5_HOST\obj\Debug\BIPIT_5_HOST.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_HOST\bin\Debug\BIPIT_5_HOST.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_HOST\bin\Debug\BIPIT_5_HOST.exe
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_HOST\bin\Debug\BIPIT_5_HOST.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_HOST\obj\Debug\BIPIT_5_HOST.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_HOST\obj\Debug\BIPIT_5_HOST.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_HOST\obj\Debug\BIPIT_5_HOST.exe
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_HOST\obj\Debug\BIPIT_5_HOST.pdb

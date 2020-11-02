@@ -23,7 +23,7 @@ namespace BIPIT_5_HOST
                 serviceH.Close();
             }
         }
-        
+
         public static void Print(string text)
         {
             Console.WriteLine(text);

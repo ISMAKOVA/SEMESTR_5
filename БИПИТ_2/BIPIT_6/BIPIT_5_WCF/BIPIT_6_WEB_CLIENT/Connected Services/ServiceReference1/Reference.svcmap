@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0c2abd64-bee5-4532-90ad-4ac5ef0d3143" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f191019e-221c-4575-9903-7852d11d0483" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="d07797c4-9f4e-4114-be0f-55feb23c982a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?wsdl" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="958cae40-d0ac-4f07-aa3b-6d842bf9b32d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd1" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="d3746c41-815f-4385-bff9-6a4199fe318a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd0" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="74e243ad-4aec-4d01-8047-234526a42ba1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?disco" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="5099f346-fd80-4f6e-8206-37a08a06121b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd2" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="2888abec-cddf-4af8-8ddb-2b4150abdf10" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="2257bea8-34aa-4027-b0e0-078b8f8ec58b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="093d3f9e-e887-4544-bbe4-b10122f49ce9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="f30ddb46-4b09-49ce-86e6-7e6317da605a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="fee97179-a95a-49a4-b949-7fefcaa03180" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

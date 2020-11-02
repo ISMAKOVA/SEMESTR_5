@@ -8,3 +8,13 @@ C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2
 C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_5\BIPIT_5_CLIENT\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.csproj.CoreCompileInputs.cache
 C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_5\BIPIT_5_CLIENT\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.exe
 C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_5\BIPIT_5_CLIENT\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\bin\Debug\BIPIT_5_CLIENT.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\bin\Debug\BIPIT_5_CLIENT.exe
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\bin\Debug\BIPIT_5_CLIENT.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.Form1.resources
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.Properties.Resources.resources
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.csproj.GenerateResource.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.exe
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_6\BIPIT_5_WCF\BIPIT_5_CLIENT\obj\Debug\BIPIT_5_CLIENT.pdb
