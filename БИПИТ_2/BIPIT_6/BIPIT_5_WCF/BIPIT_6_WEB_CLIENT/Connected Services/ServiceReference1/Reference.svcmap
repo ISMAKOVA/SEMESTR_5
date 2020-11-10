@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a3adb08c-17a8-40a1-9853-722fb20c69c1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="57b95ebe-fc05-4ac1-a671-7067c22ef6d3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="003136e2-3692-4963-b85f-a92de0865124" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="2b569b55-b928-4653-b83d-a6828e392fcf" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="41151cf0-f586-4eba-83d6-4a2f4f484b67" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?disco" />
+    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="9ec68c4c-b08c-45cf-a209-62a8a54be444" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BIPIT_5_HOST/Service/?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
