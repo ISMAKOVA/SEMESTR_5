@@ -1,0 +1,11 @@
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\bin\Debug\ChatHost.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\bin\Debug\ChatHost.exe
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\bin\Debug\ChatHost.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\bin\Debug\WCF_CHAT.dll
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\bin\Debug\WCF_CHAT.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\bin\Debug\WCF_CHAT.dll.config
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\obj\Debug\ChatHost.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\obj\Debug\ChatHost.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\obj\Debug\ChatHost.csproj.CopyComplete
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\obj\Debug\ChatHost.exe
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatHost\obj\Debug\ChatHost.pdb

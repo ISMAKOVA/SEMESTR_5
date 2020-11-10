@@ -1,0 +1,7 @@
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\WCF_CHAT\bin\Debug\WCF_CHAT.dll.config
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\WCF_CHAT\bin\Debug\WCF_CHAT.dll
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\WCF_CHAT\bin\Debug\WCF_CHAT.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\WCF_CHAT\obj\Debug\WCF_CHAT.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\WCF_CHAT\obj\Debug\WCF_CHAT.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\WCF_CHAT\obj\Debug\WCF_CHAT.dll
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\WCF_CHAT\obj\Debug\WCF_CHAT.pdb
