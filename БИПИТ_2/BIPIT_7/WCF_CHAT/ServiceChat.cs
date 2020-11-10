@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace WCF_CHAT
                 operationContext = OperationContext.Current
             };
             nextId++;
-            SendMsg(" "+user.Name + " подключился к чату!",0);
+            SendMsg(user.Name + " подключился к чату!",0);
             users.Add(user);
             return user.ID;
         }
@@ -33,7 +34,7 @@ namespace WCF_CHAT
             if (user != null)
             {
                 users.Remove(user);
-                SendMsg(" " + user.Name + " покинул чат!",0);
+                SendMsg( user.Name + " покинул чат!",0);
             }
 
         }
@@ -42,15 +43,27 @@ namespace WCF_CHAT
         {
             foreach(var item in users)
             {
-                string answer = DateTime.Now.ToShortTimeString()+"| ";
+                string answer = DateTime.Now.ToShortTimeString()+" | ";
                 var user = users.FirstOrDefault(i => i.ID == id);
                 if (user != null)
                 {
-                    answer += user.Name + " ";
+                    answer += user.Name + ": ";
                 }
-                answer += ": "+msg;
+                answer += msg;
                 item.operationContext.GetCallbackChannel<IServerChatCallback>().MsgCallback(answer);
             }
         }
+
+  /*      public void SaveMsg(int id, string msg)
+        {
+            using (FileStream fstream = new FileStream("", FileMode.OpenOrCreate))
+            {
+                // преобразуем строку в байты
+                byte[] array = System.Text.Encoding.Default.GetBytes(msg);
+                // запись массива байтов в файл
+                fstream.Write(array, 0, array.Length);
+                Console.WriteLine("Текст записан в файл");
+            }
+        }*/
     }
 }

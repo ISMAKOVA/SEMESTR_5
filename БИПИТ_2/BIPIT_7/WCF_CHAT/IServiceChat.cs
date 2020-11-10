@@ -29,6 +29,10 @@ namespace WCF_CHAT
 
         [OperationContract(IsOneWay =true)]
         void SendMsg(string msg, int id);
+
+      /*  [OperationContract]
+        void SaveMsg(int id, string msg);*/
+
     }
 
     public interface IServerChatCallback
