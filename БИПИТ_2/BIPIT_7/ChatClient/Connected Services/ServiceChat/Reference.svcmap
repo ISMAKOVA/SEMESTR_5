@@ -23,6 +23,7 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="ServiceChat.wsdl" MetadataType="Wsdl" ID="c4753b61-1afd-4a0f-b064-ec04135c8c77" SourceId="1" SourceUrl="http://localhost:8734/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="42a45d77-84d6-4cd5-ab8d-3764c09f2050" SourceId="1" SourceUrl="http://localhost:8734/?xsd=xsd2" />
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="dfdacb3f-83fc-48f0-8db3-a810f4cd2526" SourceId="1" SourceUrl="http://localhost:8734/?disco" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="2e5da253-f145-467a-bca6-e2fe3c5f01e0" SourceId="1" SourceUrl="http://localhost:8734/?xsd=xsd1" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="595c5563-c0b7-4e82-b028-aed45891ca86" SourceId="1" SourceUrl="http://localhost:8734/?xsd=xsd0" />

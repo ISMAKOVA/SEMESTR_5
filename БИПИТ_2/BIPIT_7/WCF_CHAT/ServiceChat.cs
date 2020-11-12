@@ -54,16 +54,77 @@ namespace WCF_CHAT
             }
         }
 
-  /*      public void SaveMsg(int id, string msg)
+        public  List<string> ShowMsg(string name)
         {
-            using (FileStream fstream = new FileStream("", FileMode.OpenOrCreate))
+            
+            List<string> history = new List<string>();
+            try
             {
-                // преобразуем строку в байты
-                byte[] array = System.Text.Encoding.Default.GetBytes(msg);
-                // запись массива байтов в файл
-                fstream.Write(array, 0, array.Length);
-                Console.WriteLine("Текст записан в файл");
+                using (StreamReader sr = new StreamReader(@"C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\history.txt", Encoding.Default))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        var l = line.Split(new char[] { '#' });
+                        if (l[0] == name)
+                        {
+                            for(int i = 1; i< l.Length; i++)
+                            {
+                                history.Add(l[i]);
+                            }
+
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                }
             }
-        }*/
+            catch(Exception e)
+            {
+                history.Add(e.Message);
+            }
+            return history;
+        }
+        public void SaveMsg(string name, string messages)
+        {
+            string path = @"C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\history.txt";
+            List<string> history = new List<string>();
+            try
+            {
+                using (StreamReader sr = new StreamReader(path, Encoding.Default))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        history.Add(line);
+                    }
+
+                }
+                foreach(var line in history)
+                {
+                    var l = line.Split(new char[] { '#' });
+                    if (l[0] == name)
+                    {
+                        history.Remove(line);
+                    }
+                }
+                history.Add(messages);
+                using (StreamWriter sw = new StreamWriter(path, false, Encoding.Default))
+                {
+                    foreach (var line in history)
+                    {
+                        sw.WriteLine(line);
+                    }
+                        
+                }
+            }
+            catch
+            {
+
+            }
+        }
     }
 }
