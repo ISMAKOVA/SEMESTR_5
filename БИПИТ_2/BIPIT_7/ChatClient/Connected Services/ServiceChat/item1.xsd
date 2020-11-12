@@ -35,19 +35,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="SaveMsg">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="messages" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SaveMsgResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="ShowMsg">
     <xs:complexType>
       <xs:sequence>

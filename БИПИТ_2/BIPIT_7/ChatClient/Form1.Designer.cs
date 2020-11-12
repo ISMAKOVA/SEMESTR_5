@@ -77,10 +77,9 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 12);
-            this.textBox2.Multiline = true;
+            this.textBox2.Location = new System.Drawing.Point(145, 16);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 27);
+            this.textBox2.Size = new System.Drawing.Size(167, 20);
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "Имя пользователя";
             // 

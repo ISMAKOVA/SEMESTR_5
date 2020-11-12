@@ -33,12 +33,6 @@ namespace ChatClient.ServiceChat {
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServiceChat/SendMsg")]
         System.Threading.Tasks.Task SendMsgAsync(string msg, int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceChat/SaveMsg", ReplyAction="http://tempuri.org/IServiceChat/SaveMsgResponse")]
-        void SaveMsg(string name, string messages);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceChat/SaveMsg", ReplyAction="http://tempuri.org/IServiceChat/SaveMsgResponse")]
-        System.Threading.Tasks.Task SaveMsgAsync(string name, string messages);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceChat/ShowMsg", ReplyAction="http://tempuri.org/IServiceChat/ShowMsgResponse")]
         string[] ShowMsg(string name);
         
@@ -103,14 +97,6 @@ namespace ChatClient.ServiceChat {
         
         public System.Threading.Tasks.Task SendMsgAsync(string msg, int id) {
             return base.Channel.SendMsgAsync(msg, id);
-        }
-        
-        public void SaveMsg(string name, string messages) {
-            base.Channel.SaveMsg(name, messages);
-        }
-        
-        public System.Threading.Tasks.Task SaveMsgAsync(string name, string messages) {
-            return base.Channel.SaveMsgAsync(name, messages);
         }
         
         public string[] ShowMsg(string name) {

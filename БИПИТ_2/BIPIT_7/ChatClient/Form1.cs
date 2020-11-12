@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.ServiceModel.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +16,6 @@ namespace ChatClient
         bool isConnected = false;
         ServiceChatClient client;
         int ID;
-        string Name;
         public Form1()
         {
             InitializeComponent();
@@ -24,40 +24,28 @@ namespace ChatClient
         {
             
         }
-        void ShowMsg()
-        {
-            var messages = client.ShowMsg(Name);
-            if (messages != null)
-            {
-                foreach (var m in messages)
-                {
-                    if (m != "" )
-                    {
-                        listBox1.Items.Add(m);
-                    }
-                }
-            } 
-        }
-        void SaveMsg()
-        {
-            string messages = Name + "#";
-            for (int i = 0; i < listBox1.Items.Count; i++)
-            {
-                messages += listBox1.Items[i].ToString().Trim() + "#";
-            }
 
-            client.SaveMsg(Name, messages);
-        }
+
         void ConnectUser()
         {
             if (!isConnected)
             {
                 client = new ServiceChatClient(new System.ServiceModel.InstanceContext(this));
-                Name = textBox2.Text;
                 ID = client.Connect(textBox2.Text);
+                
                 textBox2.Enabled = false;
                 button1.Text = "Выйти";
-                ShowMsg();
+                var messages = client.ShowMsg(textBox2.Text);
+                if (messages != null)
+                {
+                    foreach (var m in messages)
+                    {
+                        if (m != "")
+                        {
+                            listBox1.Items.Add(m);
+                        }
+                    }
+                }
                 isConnected = true;
             }
         }
@@ -66,7 +54,6 @@ namespace ChatClient
         {
             if (isConnected)
             {
-                SaveMsg();
                 client.Disconnect(ID);
                 client = null;
                 textBox2.Enabled = true;

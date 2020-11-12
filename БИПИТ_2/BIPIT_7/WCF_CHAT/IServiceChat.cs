@@ -31,9 +31,6 @@ namespace WCF_CHAT
         void SendMsg(string msg, int id);
 
         [OperationContract]
-        void SaveMsg(string name, string messages);
-        
-        [OperationContract]
         List<string> ShowMsg(string name);
 
     }

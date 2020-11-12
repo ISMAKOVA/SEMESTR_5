@@ -51,12 +51,6 @@
   <wsdl:message name="IServiceChat_SendMsg_InputMessage">
     <wsdl:part name="parameters" element="tns:SendMsg" />
   </wsdl:message>
-  <wsdl:message name="IServiceChat_SaveMsg_InputMessage">
-    <wsdl:part name="parameters" element="tns:SaveMsg" />
-  </wsdl:message>
-  <wsdl:message name="IServiceChat_SaveMsg_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SaveMsgResponse" />
-  </wsdl:message>
   <wsdl:message name="IServiceChat_ShowMsg_InputMessage">
     <wsdl:part name="parameters" element="tns:ShowMsg" />
   </wsdl:message>
@@ -77,10 +71,6 @@
     </wsdl:operation>
     <wsdl:operation name="SendMsg">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceChat/SendMsg" message="tns:IServiceChat_SendMsg_InputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="SaveMsg">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceChat/SaveMsg" message="tns:IServiceChat_SaveMsg_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceChat/SaveMsgResponse" message="tns:IServiceChat_SaveMsg_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ShowMsg">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceChat/ShowMsg" message="tns:IServiceChat_ShowMsg_InputMessage" />
@@ -116,15 +106,6 @@
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="SaveMsg">
-      <soap12:operation soapAction="http://tempuri.org/IServiceChat/SaveMsg" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ShowMsg">
       <soap12:operation soapAction="http://tempuri.org/IServiceChat/ShowMsg" style="document" />

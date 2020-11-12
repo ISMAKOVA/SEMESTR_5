@@ -6,16 +6,21 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WCF_CHAT
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, IncludeExceptionDetailInFaults = true)]
      public class ServiceChat : IServiceChat
     {
         List<ServerUser> users = new List<ServerUser>();
         int nextId = 1;
+        string con = "Data Source=DESKTOP-LVBRSER;Initial Catalog=chat;Integrated Security=True";
+        string userName;
         public int Connect(string name)
         {
+            userName = name;
             ServerUser user = new ServerUser()
             {
                 ID = nextId,
@@ -41,9 +46,10 @@ namespace WCF_CHAT
 
         public void SendMsg(string msg, int id)
         {
-            foreach(var item in users)
+            var date = DateTime.Now;
+            foreach (var item in users)
             {
-                string answer = DateTime.Now.ToShortTimeString()+" | ";
+                string answer = date.ToShortTimeString() + " | ";
                 var user = users.FirstOrDefault(i => i.ID == id);
                 if (user != null)
                 {
@@ -52,79 +58,42 @@ namespace WCF_CHAT
                 answer += msg;
                 item.operationContext.GetCallbackChannel<IServerChatCallback>().MsgCallback(answer);
             }
+            if (id != 0)
+            {
+                SaveMsg(userName, msg, date);
+            }
         }
 
-        public  List<string> ShowMsg(string name)
+        public void SaveMsg(string name, string msg, DateTime date)
+        {
+            SqlConnection connection = new SqlConnection(con);
+            connection.Open();
+            SqlCommand command = new SqlCommand($"insert into Messages (name, message, date) values(@name, @message, @date)", connection);
+            command.Parameters.AddWithValue("@name", name);
+            command.Parameters.AddWithValue("@message", msg);
+            command.Parameters.AddWithValue("@date", Convert.ToDateTime(date));
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+        public List<string> ShowMsg(string name)
         {
             
             List<string> history = new List<string>();
-            try
-            {
-                using (StreamReader sr = new StreamReader(@"C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\history.txt", Encoding.Default))
-                {
-                    string line;
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        var l = line.Split(new char[] { '#' });
-                        if (l[0] == name)
-                        {
-                            for(int i = 1; i< l.Length; i++)
-                            {
-                                history.Add(l[i]);
-                            }
+            DataTable dataTable = new DataTable();
+            SqlConnection connection = new SqlConnection(con);
 
-                        }
-                        else
-                        {
-                            return null;
-                        }
-                    }
+            string query = $"select format(date,'hh:mm') as date, name, message from Messages where name ='" +name+"'";
+            SqlCommand command = new SqlCommand(query, connection);
 
-                }
-            }
-            catch(Exception e)
+            connection.Open();
+            SqlDataAdapter sqlData1 = new SqlDataAdapter(command);
+            sqlData1.Fill(dataTable);
+            connection.Close();
+            foreach(DataRow row in dataTable.Rows)
             {
-                history.Add(e.Message);
+                history.Add(String.Format("{0} | {1}: {2}", row["date"], row["name"], row["message"]));
             }
             return history;
-        }
-        public void SaveMsg(string name, string messages)
-        {
-            string path = @"C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\history.txt";
-            List<string> history = new List<string>();
-            try
-            {
-                using (StreamReader sr = new StreamReader(path, Encoding.Default))
-                {
-                    string line;
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        history.Add(line);
-                    }
-
-                }
-                foreach(var line in history)
-                {
-                    var l = line.Split(new char[] { '#' });
-                    if (l[0] == name)
-                    {
-                        history.Remove(line);
-                    }
-                }
-                history.Add(messages);
-                using (StreamWriter sw = new StreamWriter(path, false, Encoding.Default))
-                {
-                    foreach (var line in history)
-                    {
-                        sw.WriteLine(line);
-                    }
-                        
-                }
-            }
-            catch
-            {
-
-            }
         }
     }
 }
