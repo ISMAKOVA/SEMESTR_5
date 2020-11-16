@@ -1,0 +1,10 @@
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\bin\Debug\ChatClient.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\bin\Debug\ChatClient.exe
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\bin\Debug\ChatClient.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\obj\Debug\ChatClient.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\obj\Debug\ChatClient.Form1.resources
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\obj\Debug\ChatClient.Properties.Resources.resources
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\obj\Debug\ChatClient.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\obj\Debug\ChatClient.exe
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_7\ChatClient\obj\Debug\ChatClient.pdb
