@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container">
-        <div class="row overflow-auto">
+        <div class="row overflow-auto justify-content-center">
+            <div class="col my-3">
                         <asp:GridView ID="Table1" 
                            HorizontalAlign="Center" 
                             Font-Names="Verdana" 
@@ -17,15 +18,13 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
+                </div>
         </div>
-        <div class="row justify-content-end">
-            <div class="col-4 my-3">
-            <asp:Button ID="btn_delete" CssClass ="btn btn-danger btn-block"  runat="server" Text="Удалить" /></div>
-        </div>
+            
         <div class="row">
             <div class="col">
                 <h5>Дата и время</h5>
-                <asp:TextBox ID="date" runat="server" TextMode="Date" CssClass="form-control" ></asp:TextBox>
+                <asp:TextBox ID="date" runat="server" TextMode="DateTimeLocal" CssClass="form-control" ></asp:TextBox>
             </div>
             <div class="col">
                 <h5>Автор</h5>
@@ -39,11 +38,16 @@
             </div>
         </div>
 
-        <div class="row justify-content-end">
-            <div class="col-4 my-3">
-            <asp:Button ID="btn_add" CssClass ="btn btn-primary btn-block"  runat="server" Text="Добавить" /></div>
-        </div>
+        <div class="row">
+             <div class="col my-3">
+            <asp:Button ID="btn_add" CssClass ="btn btn-primary btn-block" onclick="NewRec" runat="server" Text="Добавить" /></div>
 
+            <div class="col my-3">
+            <asp:Button ID="btn_delete" CssClass ="btn btn-danger btn-block" onclick="Delete" runat="server" Text="Удалить" /></div>
+            <div class="col my-3">
+            <asp:Button ID="btn_update" CssClass ="btn btn-info btn-block"  onclick="Update" runat="server" Text="Обновить" /></div>
+        </div>
+        <asp:Label runat="server" id="error"></asp:Label>
     </div>
 
 </asp:Content>

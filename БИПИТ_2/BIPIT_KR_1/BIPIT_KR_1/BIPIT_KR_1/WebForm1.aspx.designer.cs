@@ -24,15 +24,6 @@ namespace BIPIT_KR_1
         protected global::System.Web.UI.WebControls.GridView Table1;
 
         /// <summary>
-        /// btn_delete элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_delete;
-
-        /// <summary>
         /// date элемент управления.
         /// </summary>
         /// <remarks>
@@ -67,5 +58,32 @@ namespace BIPIT_KR_1
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_add;
+
+        /// <summary>
+        /// btn_delete элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_delete;
+
+        /// <summary>
+        /// btn_update элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_update;
+
+        /// <summary>
+        /// error элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label error;
     }
 }
