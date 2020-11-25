@@ -55,7 +55,10 @@ namespace BIPIT_KR_1
                     if (date.Text != "" && author.Text != "" && problem.Text != "")
                         service.Update(id, date.Text, author.Text, problem.Text);
                     else
+                    {
                         error.Text = "Поля не должны быть пустыми";
+                        return;
+                    }
 
                 }
             }
@@ -65,10 +68,14 @@ namespace BIPIT_KR_1
         protected void NewRec(object sender, EventArgs e)
         {
             Service service = new Service();
+            string s = author.Text;
             if (date.Text != "" && author.Text != "" && problem.Text != "")
                 service.NewRec(date.Text, author.Text, problem.Text);
             else
+            {
                 error.Text = "Поля не должны быть пустыми";
+                return;
+            }
             ShowTable(sender, e);
             error.Text = "";
         }
