@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BIPIT_8
+namespace BIPIT_3
 {
     using System;
     using System.Data.Entity;

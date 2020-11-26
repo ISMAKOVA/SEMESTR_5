@@ -61,3 +61,4 @@ C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2
 C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_8\BIPIT_3\obj\Debug\BIPIT_8.csproj.CopyComplete
 C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_8\BIPIT_3\obj\Debug\BIPIT_3.dll
 C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_8\BIPIT_3\obj\Debug\BIPIT_3.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_8\BIPIT_3\obj\Debug\BIPIT_8.csprojAssemblyReference.cache
