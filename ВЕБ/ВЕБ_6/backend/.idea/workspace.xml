@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="16a34ad4-919b-4127-a7a4-ccae94f69603" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kjTyB4Q5IFpMsp2Vy6v6ALgdzQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="web_6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_6.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$USER_HOME$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <arguments>
+        <array />
+      </arguments>
+      <runOnlyEnvs>
+        <array />
+      </runOnlyEnvs>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.web_6" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16a34ad4-919b-4127-a7a4-ccae94f69603" name="Default Changelist" comment="" />
+      <created>1606213253678</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606213253678</updated>
+      <workItem from="1606213258906" duration="16834000" />
+      <workItem from="1606329477960" duration="584000" />
+      <workItem from="1606722731394" duration="1092000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="250" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606225651963">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="421" y="250" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1606225651963" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1606216303598">
+      <screen x="48" y="23" width="1392" height="877" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/48.23.1392.877@48.23.1392.877" timestamp="1606216303598" />
+    <state width="1398" height="65" key="GridCell.Tab.0.bottom" timestamp="1606724563624">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="65" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606724563624" />
+    <state width="1398" height="65" key="GridCell.Tab.0.center" timestamp="1606724563623">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="65" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606724563623" />
+    <state width="1398" height="65" key="GridCell.Tab.0.left" timestamp="1606724563623">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="65" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606724563623" />
+    <state width="1398" height="65" key="GridCell.Tab.0.right" timestamp="1606724563624">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="65" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606724563624" />
+    <state width="1396" height="284" key="GridCell.Tab.1.bottom" timestamp="1606234763791">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1396" height="284" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606234763791" />
+    <state width="1396" height="284" key="GridCell.Tab.1.center" timestamp="1606234763790">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1396" height="284" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1606234763790" />
+    <state width="1396" height="284" key="GridCell.Tab.1.left" timestamp="1606234763790">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1396" height="284" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1606234763790" />
+    <state width="1396" height="284" key="GridCell.Tab.1.right" timestamp="1606234763791">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1396" height="284" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1606234763791" />
+    <state x="192" y="46" key="SettingsEditor" timestamp="1606330165203">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="192" y="46" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1606330165203" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/web_6.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/backend$web_6.coverage" NAME="web_6 Coverage Results" MODIFIED="1606722750588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
