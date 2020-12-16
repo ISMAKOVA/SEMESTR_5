@@ -84,3 +84,7 @@ C:\Users\ismak\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_9\BIPIT_9\BIPIT
 C:\Users\ismak\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_9\BIPIT_9\BIPIT_9\obj\Debug\BIPIT_9.csproj.CopyComplete
 C:\Users\ismak\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_9\BIPIT_9\BIPIT_9\obj\Debug\BIPIT_9.dll
 C:\Users\ismak\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_9\BIPIT_9\BIPIT_9\obj\Debug\BIPIT_9.pdb
+C:\Users\ismak\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_9\BIPIT_9\BIPIT_9\bin\EntityFramework.dll
+C:\Users\ismak\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_9\BIPIT_9\BIPIT_9\bin\EntityFramework.SqlServer.dll
+C:\Users\ismak\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_9\BIPIT_9\BIPIT_9\bin\EntityFramework.xml
+C:\Users\ismak\Desktop\универ\SEMESTR_5\БИПИТ_2\BIPIT_9\BIPIT_9\BIPIT_9\bin\EntityFramework.SqlServer.xml

@@ -3,28 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BIPIT_9.Models;
 
 namespace BIPIT_9.Controllers
 {
     public class HomeController : Controller
     {
+        galleryEntities gallery = new galleryEntities();
         public ActionResult Index()
         {
-            return View();
+            return View(gallery.Moving.ToList());
         }
 
-        public ActionResult About()
+        public ActionResult Exhibit()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            ViewBag.Message = "Экспонаты";
+            
+            return View(gallery.Exhibits.ToList());
         }
 
-        public ActionResult Contact()
+        public ActionResult Hall()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Залы";
 
-            return View();
+            return View(gallery.Halls.ToList());
         }
     }
 }

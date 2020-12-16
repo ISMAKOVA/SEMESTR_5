@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BIPIT_9.Models.Halls>
+
+<h3>@ViewBag.Message</h3>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Название зала</th>
+        <th>Этаж</th>
+        <th>Музей</th>
+        <th>Город</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_hall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hall_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.floor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.museum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+        </tr>
+    }
+</table>

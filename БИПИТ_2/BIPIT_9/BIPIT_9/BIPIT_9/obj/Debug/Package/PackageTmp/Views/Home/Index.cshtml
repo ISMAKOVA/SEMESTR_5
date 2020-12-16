@@ -1,0 +1,72 @@
+﻿@model IEnumerable<BIPIT_9.Models.Moving>
+@{
+    ViewBag.Title = "Главная страница";
+}
+
+<div class="jumbotron">
+    <h1>Экспонаты в картинной галерее</h1>
+    <p class="lead">Выполнила: Исмакова Даяна, ИСИТ 189-1</p>
+</div>
+
+<div class="row ">
+
+
+
+    <h3>@ViewBag.Message</h3>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>ID Экспоната</th>
+            <th>Экспонат</th>
+            <th>Название</th>
+            <th>Автор</th>
+            <th>ID Зала</th>
+            <th>Название Зала</th>
+            <th>Музей</th>
+            <th>Город</th>
+            <th>Дата поступления</th>
+            <th>Дата отъезда</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.exhibit_fk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exhibits.exhibit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exhibits.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exhibits.author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.halls_fk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Halls.hall_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Halls.museum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Halls.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_start)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_end)
+        </td>
+    </tr>
+        }
+    </table>
+
+
+</div>

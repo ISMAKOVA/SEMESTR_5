@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BIPIT_9.Models.Exhibits>
+
+<h3>@ViewBag.Message</h3>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Экспонат</th>
+        <th>Автор</th>
+        <th>Материал</th>
+        <th>Год</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_exhibit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.exhibit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.material)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year)
+            </td>
+        </tr>
+    }
+</table>
