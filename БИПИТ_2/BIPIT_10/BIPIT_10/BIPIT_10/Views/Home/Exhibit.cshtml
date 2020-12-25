@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BIPIT_10.Models.Exhibits>
+
+<h3>@ViewBag.Message</h3>
+@if (User.Identity.IsAuthenticated)
+{
+    <p>
+        @Html.ActionLink("Добавить новый экспонат", "Exhibit", "Create")
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Экспонат</th>
+        <th>Автор</th>
+        <th>Материал</th>
+        <th>Год</th>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <th>Редактировать/Удалить</th>
+        }
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_exhibit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.exhibit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.material)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year)
+            </td>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <td>
+                    @Html.ActionLink("Редактировать", "Exhibit", "Edit", new { id = item.id_exhibit }, null) /
+                    @Html.ActionLink("Удалить", "Exhibit", "Delete", new { id = item.id_exhibit }, null)
+                </td>
+            }
+        </tr>
+    }
+</table>

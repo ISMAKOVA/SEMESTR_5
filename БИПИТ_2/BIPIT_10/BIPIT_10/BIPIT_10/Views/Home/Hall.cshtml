@@ -1,0 +1,51 @@
+﻿@model IEnumerable<BIPIT_10.Models.Halls>
+
+<h3>@ViewBag.Message</h3>
+@if (User.Identity.IsAuthenticated)
+{
+    <p>
+        @Html.ActionLink("Добавить новый зал", "Hall", "Create")
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Название зала</th>
+        <th>Этаж</th>
+        <th>Музей</th>
+        <th>Город</th>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <th>Редактировать/Удалить</th>
+        }
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_hall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hall_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.floor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.museum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <td>
+                    @Html.ActionLink("Редактировать", "Hall", "Edit", new { id = item.id_hall }, null)/
+                    @Html.ActionLink("Удалить", "Hall", "Delete", new { id = item.id_hall }, null)
+                </td>
+            }
+        </tr>
+    }
+</table>

@@ -1,0 +1,52 @@
+﻿<h2>Обновить перемещение</h2>
+@using (Html.BeginForm("Index", "Edit", FormMethod.Post, new { @class = "" }))
+{
+    <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label">ID</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="text" name="id" value="@ViewBag.Id">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label">Экспонат</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="text" value="@ViewBag.Exhibit">
+        </div>
+    </div>
+    <div class=" form-group row">
+        <label for="name" class="col-sm-3 col-form-label">Выбрать экспонат</label>
+        <div class="col-sm-6">
+            @BIPIT_10.BootstrapHelp.bootstrapHelp.MyDropdown("exhibits", ViewBag.Exhibits, "Экспонаты")
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label"> Выбрать зал</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="text" value="@ViewBag.Hall">
+        </div>
+    </div>
+    <div class=" form-group row">
+        <label for="name" class="col-sm-3 col-form-label">Зал</label>
+        <div class="col-sm-6">
+            @BIPIT_10.BootstrapHelp.bootstrapHelp.MyDropdown("halls", ViewBag.Halls, "Залы")
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label">Начало</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="date" name="start" id="start" value="@ViewBag.start">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label">Окончание</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="date" name="end" id="end" value="@ViewBag.end">
+        </div>
+    </div>
+    <div class="col">
+        <button class="btn btn-info" value="Edit">Обновить</button>
+    </div>
+
+}
+
