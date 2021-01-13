@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="galleryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Exhibits">
+    <Key>
+      <PropertyRef Name="id_exhibit" />
+    </Key>
+    <Property Name="id_exhibit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exhibit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="material" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Moving" Relationship="Self.FK_Moving_Exhibits" FromRole="Exhibits" ToRole="Moving" />
+  </EntityType>
+  <EntityType Name="Halls">
+    <Key>
+      <PropertyRef Name="id_hall" />
+    </Key>
+    <Property Name="id_hall" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hall_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="floor" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="museum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Moving" Relationship="Self.FK_Moving_Halls" FromRole="Halls" ToRole="Moving" />
+  </EntityType>
+  <EntityType Name="Moving">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exhibit_fk" Type="Int32" Nullable="false" />
+    <Property Name="halls_fk" Type="Int32" Nullable="false" />
+    <Property Name="date_start" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="date_end" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Exhibits" Relationship="Self.FK_Moving_Exhibits" FromRole="Moving" ToRole="Exhibits" />
+    <NavigationProperty Name="Halls" Relationship="Self.FK_Moving_Halls" FromRole="Moving" ToRole="Halls" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Moving_Exhibits">
+    <End Role="Exhibits" Type="Self.Exhibits" Multiplicity="1" />
+    <End Role="Moving" Type="Self.Moving" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exhibits">
+        <PropertyRef Name="id_exhibit" />
+      </Principal>
+      <Dependent Role="Moving">
+        <PropertyRef Name="exhibit_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moving_Halls">
+    <End Role="Halls" Type="Self.Halls" Multiplicity="1" />
+    <End Role="Moving" Type="Self.Moving" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Halls">
+        <PropertyRef Name="id_hall" />
+      </Principal>
+      <Dependent Role="Moving">
+        <PropertyRef Name="halls_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="galleryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Exhibits" EntityType="Self.Exhibits" />
+    <EntitySet Name="Halls" EntityType="Self.Halls" />
+    <EntitySet Name="Moving" EntityType="Self.Moving" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Moving_Exhibits" Association="Self.FK_Moving_Exhibits">
+      <End Role="Exhibits" EntitySet="Exhibits" />
+      <End Role="Moving" EntitySet="Moving" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moving_Halls" Association="Self.FK_Moving_Halls">
+      <End Role="Halls" EntitySet="Halls" />
+      <End Role="Moving" EntitySet="Moving" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+</Schema>

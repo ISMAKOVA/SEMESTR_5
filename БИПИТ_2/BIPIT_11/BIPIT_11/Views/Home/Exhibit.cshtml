@@ -1,0 +1,102 @@
+﻿
+<div id="tableBlock"></div>
+
+<div id="createBlock">
+    <p><b>Добавление экспоната</b></p>
+    <table>
+        <tr><td><label>Экспонат: </label></td><td><input type="text" id="Exhibit" /></td></tr>
+        <tr><td><label>Автор: </label></td><td><input type="text" id="addAuthor" /></td></tr>
+        <tr><td><label>Название: </label></td><td><input type="text" id="addName" /></td></tr>
+        <tr><td><label>Материал: </label></td><td><input type="text" id="addMaterial" /></td></tr>
+        <tr><td><label>Год: </label></td><td><input type="text" id="addYear" /></td></tr>
+    </table>
+    <button id="addExhibit">Сохранить</button>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+        GetAllExhibits();
+
+        $("#addExhibit").click(function (event) {
+            event.preventDefault();
+            AddExhibit();
+        });
+
+    });
+    function GetAllExhibits() {
+
+        $("#createBlock").css('display', 'block');
+        $.ajax({
+            url: '/api/GetExhibits',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                WriteResponse(data);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+    function AddExhibit() {
+        var exhibit = {
+            exhibit: $('#Exhibit').val(),
+            author: $('#addAuthor').val(),
+            name: $('#addName').val(),
+            material: $('#addMaterial').val(),
+            year: $('#addYear').val()
+        };
+
+        $.ajax({
+            url: '/api/CreatetExhibit/',
+            type: 'POST',
+            data: JSON.stringify(exhibit),
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                GetAllExhibits();
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+
+    function DeleteExhibit(id) {
+
+        $.ajax({
+            url: '/api/DeleteExhibit?id=' + id,
+            type: 'DELETE',
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                GetAllExhibits();
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+
+ // вывод полученных данных на экран
+    function WriteResponse(items) {
+        var strResult = "<table  class='table'><th>ID</th><th>Экспонат</th><th>Автор</th> <th>Название</th><th>Материал</th> <th> Год</th>";
+        $.each(items, function (index, item) {
+            strResult += "<tr><td>" + item.id_exhibit + "</td><td> " + item.exhibit + "</td><td>" + item.author + "</td><td>"+
+                item.name + "</td><td>" + item.material + "</td><td>"+ item.year+
+            "</td><td><a id='delItem' data-item='" + item.id_exhibit + "' onclick='DeleteItem(this);' >Удалить</a></td></tr>";
+        });
+        strResult += "</table>";
+        $("#tableBlock").html(strResult);
+
+    }
+    // обработчик удаления
+    function DeleteItem(el) {
+        // получаем id удаляемого объекта
+        var id = $(el).attr('data-item');
+        DeleteExhibit(id);
+    }
+
+    </script>
+}
+

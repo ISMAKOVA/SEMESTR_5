@@ -1,0 +1,150 @@
+﻿<div class="jumbotron">
+    <h1>WEB API</h1>
+    <h1>Ismakova Dayana</h1>
+</div>
+
+<div id="tableBlock"></div>
+
+<div id="createBlock">
+    <p><b>Добавление перемещения</b></p>
+    <table>
+        <tr><td><label>ID Экспоната: </label></td><td><select id="selectExhibit"></select></td></tr>
+        <tr><td><label>ID Зала: </label></td><td><select id="selectHall"></select></td> </tr>
+        <tr><td><label>Дата поступления: </label></td><td><input type="date" id="addStart" /></td></tr>
+        <tr><td><label>Дата отъезда: </label></td><td><input type="date" id="addEnd" /></td></tr>
+    </table>
+    <button id="addMoving">Сохранить</button>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            GetAllMovings();
+            GetAllHalls();
+            GetAllExhibits();
+
+            $("#addMoving").click(function (event) {
+                event.preventDefault();
+                AddMoving();
+            });
+
+        });
+        function GetAllMovings() {
+
+            $("#createBlock").css('display', 'block');
+            $.ajax({
+                url: '/api/GetMovings',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    WriteResponse(data);
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+        function AddMoving() {
+            var moving = {
+                exhibit_fk: $('#selectExhibit').val(),
+                halls_fk: $('#selectHall').val(),
+                date_start: $('#addStart').val(),
+                date_end: $('#addEnd').val()
+            };
+
+            $.ajax({
+                url: '/api/CreatetMoving/',
+                type: 'POST',
+                data: JSON.stringify(moving),
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    GetAllMovings();
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+
+        function DeleteMoving(id) {
+
+            $.ajax({
+                url: '/api/DeleteMoving?id=' + id,
+                type: 'DELETE',
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    GetAllMovings();
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+
+        // вывод полученных данных на экран
+        function WriteResponse(movings) {
+            
+            var strResult = "<table  class='table'><th>ID</th><th>ID экспоната</th><th>ID зала</th> <th>Дата поступления</th><th>Дата отъезда</th>";
+            $.each(movings, function (index, item) {
+                var start = new Date(item.date_start);
+                var end = new Date(item.date_end);
+                strResult += "<tr><td>" + item.id + "</td><td> " + item.exhibit_fk + "</td><td>" + item.halls_fk + "</td><td>" + start.getDay() + "/"+ (start.getMonth()+1)+"/"+start.getFullYear()
+                    + "</td><td>" + end.getDay() + "/" + (end.getMonth() + 1) + "/" + end.getFullYear() +
+                    "</td><td><a id='delItem' data-item='" + item.id + "' onclick='DeleteItem(this);' >Удалить</a></td></tr>";
+            });
+            strResult += "</table>";
+            $("#tableBlock").html(strResult);
+
+        }
+        // обработчик удаления
+        function DeleteItem(el) {
+            // получаем id удаляемого объекта
+            var id = $(el).attr('data-item');
+            DeleteMoving(id);
+        }
+
+        function CreateSelectHall(array) {
+            $.each(array, function (key, value) {
+                $('#selectHall').append('<option value="' + value.id_hall + '">' + value.id_hall + ' ' + value.hall_name + ' ' + value.museum + '</option>');
+            });
+        }
+
+        function CreateSelectExhibit(array) {
+            $.each(array, function (key, value) {
+                $('#selectExhibit').append('<option value="' + value.id_exhibit + '">' + value.id_exhibit + ' ' + value.exhibit + ' ' + value.name + ' ' + value.author + '</option>');
+            });
+        }
+
+        function GetAllHalls() {
+
+            $.ajax({
+                url: '/api/GetHalls',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    CreateSelectHall(data);
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+
+        function GetAllExhibits() {
+
+            $.ajax({
+                url: '/api/GetExhibits',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    CreateSelectExhibit(data);
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+
+    </script>
+}
