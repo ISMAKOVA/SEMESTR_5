@@ -1,0 +1,101 @@
+﻿
+
+<div id="tableBlock"></div>
+
+<div id="createBlock">
+    <p><b>Добавление экспоната</b></p>
+    <table>
+        <tr><td><label>Название зала: </label></td><td><input type="text" id="Hall" /></td></tr>
+        <tr><td><label>Этаж: </label></td><td><input type="text" id="addFloor" /></td></tr>
+        <tr><td><label>Музей: </label></td><td><input type="text" id="addMuseum" /></td></tr>
+        <tr><td><label>Город: </label></td><td><input type="text" id="addCity" /></td></tr>
+    </table>
+    <button id="addHall">Сохранить</button>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+        GetAllHalls();
+
+        $("#addHall").click(function (event) {
+            event.preventDefault();
+            AddHall();
+        });
+
+    });
+    function GetAllHalls() {
+
+        $("#createBlock").css('display', 'block');
+        $.ajax({
+            url: '/api/GetHalls',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                WriteResponse(data);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+    function AddHall() {
+        var hall = {
+            hall_name: $('#Hall').val(),
+            floor: $('#addFloor').val(),
+            museum: $('#addMuseum').val(),
+            city: $('#addCity').val()
+        };
+
+        $.ajax({
+            url: '/api/CreatetHall/',
+            type: 'POST',
+            data: JSON.stringify(hall),
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                GetAllHalls();
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+
+    function DeleteHall(id) {
+
+        $.ajax({
+            url: '/api/DeleteHall?id=' + id,
+            type: 'DELETE',
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                GetAllHalls();
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+
+ // вывод полученных данных на экран
+    function WriteResponse(items) {
+        var strResult = "<table  class='table'><th>ID</th><th>Название зала</th><th>Этаж</th> <th>Музей</th><th>Город</th>";
+        $.each(items, function (index, item) {
+            strResult += "<tr><td>" + item.id_hall + "</td><td> " + item.hall_name + "</td><td>" + item.floor + "</td><td>" +
+                item.museum + "</td><td>" + item.city+
+            "</td><td><a id='delItem' data-item='" + item.id_hall + "' onclick='DeleteItem(this);' >Удалить</a></td></tr>";
+        });
+        strResult += "</table>";
+        $("#tableBlock").html(strResult);
+
+    }
+    // обработчик удаления
+    function DeleteItem(el) {
+        // получаем id удаляемого объекта
+        var id = $(el).attr('data-item');
+        DeleteHall(id);
+    }
+
+    </script>
+}
+
